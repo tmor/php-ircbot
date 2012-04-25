@@ -13,7 +13,7 @@
 * - Execute
 *   - $ nohup php -q ircbot.php &
 * - cron
-*   - crotab -e
+*   - crontab -e
 *   - *\/10 * * * * /path/to/ircbot.cron.sh start >/dev/null 2>&1
 *
 * - http://pear.php.net/package/Net_SmartIRC/
