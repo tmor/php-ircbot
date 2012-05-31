@@ -7,6 +7,7 @@ PHP製IRC BOT
 
 - Install
   - # pear install Net_SmartIRC
+  - # vi ircbot.ini
 
 - cron
   - crontab -e
