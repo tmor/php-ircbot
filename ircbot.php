@@ -20,7 +20,7 @@
 * - http://www.phppro.jp/phptips/archives/vol36/1
 * - http://d.hatena.ne.jp/anon_193/20090214/1234559387
 *
-* @version $Revision: 254 $
+* @version $Revision: 284 $
 */
 
 require_once("mybot.class.php");
@@ -70,8 +70,8 @@ function main()
 	pcntl_signal(SIGUSR1, "sig_handler");
 
 	$ini = parse_ini_file(IRC_CONFIG, true);
-	$bot = &new MyBot($ini['server']);
-	$irc = &new Net_SmartIRC();
+	$bot = new MyBot($ini['server']);
+	$irc = new Net_SmartIRC();
 	$irc->setDebug(SMARTIRC_DEBUG_ALL);
 	$irc->setLogfile(CUR_DIR . DS . 'log' . DS . 'ircbot.log');
 	$irc->setLogdestination(SMARTIRC_FILE); // ログをファイルに出力
@@ -124,4 +124,6 @@ function main()
 
 	$irc->listen();
 	$irc->disconnect();
+	
+	return 0;
 }
