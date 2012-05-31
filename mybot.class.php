@@ -4,7 +4,7 @@
 * @brief ircbot
 *
 * @note
-* @version $Revision: 234 $
+* @version $Revision: 283 $
 */
 
 require_once("Net/SmartIRC.php");
@@ -23,8 +23,8 @@ defined('PLUGIN_URL_TITLE_MAX') or define('PLUGIN_URL_TITLE_MAX', 255);
 
 class MyBot
 { 
-	var $system_revision = '$Revision: 234 $';
-	var $system_date = '$Date: 2012-02-12 12:59:59 +0900 (日, 12  2月 2012) $';
+	var $system_revision = '$Revision: 283 $';
+	var $system_date = '$Date: 2012-05-31 23:44:20 +0900 (木, 31  5月 2012) $';
 	var $options = array(
 		'host' => '',
 		'port' => '',
@@ -119,7 +119,7 @@ class MyBot
 	// なると付与
 	// ニックネームが自分だったら処理をしない
 	// HOSTを参照してローカルのユーザーだったらオペレーション権限を付与
-	// それ以外の場合は「ごきげんよう」と挨拶するｗ
+	// それ以外の場合は「ごきげんよう」と挨拶する
 	function naruto(&$irc, &$data){
 		if ($data->nick == $irc->_nick) return;
 
